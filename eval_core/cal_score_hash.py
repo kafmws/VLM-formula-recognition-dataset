@@ -168,12 +168,12 @@ class HashTestInterface:
                         'latex_content': latex_content
                     })
                 else:
-                    print(f"  ✗ 生成失败")
+                    print(f"  ✗ 生成失败 LaTeX编译失败字符串 {latex_content}")
                     results.append({
                         'txt_file': txt_path,
                         'generated_image': None,
                         'success': False,
-                        'error': 'LaTeX编译失败'
+                        'error': f'LaTeX编译失败 {latex_content}'
                     })
                     
             except Exception as e:
